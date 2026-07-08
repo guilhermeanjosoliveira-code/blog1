@@ -1,0 +1,100 @@
+/* Configurações globais de reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+/* Conteúdo Principal */
+main {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem siga as bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajuste da Imagem */
+.post-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover; /* Recorta a imagem proporcionalmente sem distorcer */
+    display: block;
+}
+
+/* Área de texto do post */
+.content {
+    padding: 30px;
+}
+
+.content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.content p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Botão de Curtir */
+.like-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.like-button:active {
+    transform: scale(0.95);
+}
+
+.heart {
+    font-size: 1.2rem;
+}

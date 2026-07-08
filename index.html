@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        header{
-            background-color: aqua;
-            color: black;
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            padding: 16px;
-        }
-        main{
-            background-color: blue;
-            color: blueviolet;
-            max-width: 800px;
-            margin: auto;
-        }
-    </style>
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Título principal</h1>
-        <p>explicação breve sobre o blog</p>
+        <h1>Título Principal</h1>
+        <p>Uma explicação breve e charmosa sobre o tema do seu blog.</p>
     </header>
+
     <main>
-        <img src="Gemini_Generated_Image_mf1m1imf1m1imf1m (1).png">
-            <h2>subtítulo</h2>
-            <p>escrever detalhadamente sobre o assunto</p>
-        </main>
+        <img src="Gemini_Generated_Image_mf1m1imf1m1imf1m (1).png" alt="Imagem do post" class="post-image">
+        
+        <section class="content">
+            <h2>Subtítulo do Post</h2>
+            <p>Aqui você pode escrever detalhadamente sobre o assunto. Use parágrafos bem espaçados para tornar a leitura agradável e fluida para os seus visitantes.</p>
+            
+            <button id="likeBtn" class="like-button">
+                <span class="heart">❤</span> Curtir (<span id="likeCount">0</span>)
+            </button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
