@@ -1,32 +1,41 @@
-// 1. Funcionalidade do Botão Curtir
+// 1. Curtir
 let count = 0;
 const likeBtn = document.getElementById('likeBtn');
 const likeCount = document.getElementById('likeCount');
 
-likeBtn.addEventListener('click', () => {
-    count++;
-    likeCount.textContent = count;
-});
+if (likeBtn && likeCount) {
+    likeBtn.addEventListener('click', () => {
+        count++;
+        likeCount.textContent = count;
+    });
+}
 
-// 2. Funcionalidade do Modo Escuro / Claro
+// 2. Modo Escuro / Claro
 const themeToggleBtn = document.getElementById('themeToggle');
 
 function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+    // Alterna a classe 'light-mode' no <body>
+    document.body.classList.toggle('light-mode');
 
-    if (document.body.classList.contains('dark-mode')) {
+    // Se estiver com light-mode, ajusta o texto do botão
+    if (document.body.classList.contains('light-mode')) {
         themeToggleBtn.textContent = '🌙 Modo Escuro';
     } else {
         themeToggleBtn.textContent = '☀️ Modo Claro';
     }
 }
 
-// Alternar via clique no botão
-themeToggleBtn.addEventListener('click', toggleTheme);
+if (themeToggleBtn) {
+    // Evento de Clique
+    themeToggleBtn.addEventListener('click', toggleTheme);
 
-// Alternar pressionando a tecla "A"
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'a' || event.key === 'A') {
-        toggleTheme();
-    }
-});
+    // Evento de Tecla "A"
+    document.addEventListener('keydown', (event) => {
+        // Evita ativar ao digitar em um campo de texto caso adicione um no futuro
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') return;
+        
+        if (event.key === 'a' || event.key === 'A') {
+            toggleTheme();
+        }
+    });
+}

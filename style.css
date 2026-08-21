@@ -1,27 +1,29 @@
-/* Variáveis para o Tema Claro (Padrão) */
+/* Variáveis para o Tema Escuro (Padrão inicial) */
 :root {
-    --bg-body: #f1f5f9;
-    --bg-card: #ffffff;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    --btn-like-bg: #0284c7;
-    --btn-like-text: #ffffff;
-    --btn-theme-bg: #e2e8f0;
-    --btn-theme-text: #0f172a;
-}
-
-/* Variáveis para o Modo Escuro */
-body.dark-mode {
     --bg-body: #0f172a;
     --bg-card: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    --title-color: #38bdf8;
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
     --btn-like-bg: #38bdf8;
     --btn-like-text: #0f172a;
     --btn-theme-bg: #334155;
     --btn-theme-text: #f8fafc;
+}
+
+/* Variáveis para o Modo Claro */
+body.light-mode {
+    --bg-body: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --title-color: #0284c7;
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    --btn-like-bg: #0284c7;
+    --btn-like-text: #ffffff;
+    --btn-theme-bg: #e2e8f0;
+    --btn-theme-text: #0f172a;
 }
 
 * {
@@ -58,11 +60,7 @@ header {
 
 header h1 {
     font-size: 2.2rem;
-    color: #0284c7;
-}
-
-body.dark-mode header h1 {
-    color: #38bdf8;
+    color: var(--title-color);
 }
 
 header p {
