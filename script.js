@@ -1,21 +1,34 @@
-// Seleciona os elementos do HTML
+// 1. Funcionalidade do Botão Curtir
+let count = 0;
 const likeBtn = document.getElementById('likeBtn');
 const likeCount = document.getElementById('likeCount');
 
-let count = 0;
-let liked = false;
-
-// Adiciona o evento de clique
 likeBtn.addEventListener('click', () => {
-    if (!liked) {
-        count++;
-        likeCount.textContent = count;
-        likeBtn.style.backgroundColor = '#27ae60'; // Muda para verde ao curtir
-        liked = true;
+    count++;
+    likeCount.textContent = count;
+});
+
+// 2. Funcionalidade do Modo Escuro / Claro
+const themeToggleBtn = document.getElementById('themeToggle');
+
+// Função centralizada para alternar o tema
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = '☀️ Modo Claro';
     } else {
-        count--;
-        likeCount.textContent = count;
-        likeBtn.style.backgroundColor = '#e74c3c'; // Volta para vermelho ao descurtir
-        liked = false;
+        themeToggleBtn.textContent = '🌙 Modo Escuro';
+    }
+}
+
+// Clique no botão
+themeToggleBtn.addEventListener('click', toggleTheme);
+
+// Atalho na tecla "A"
+document.addEventListener('keydown', (event) => {
+    // Funciona com 'a' minúsculo ou 'A' maiúsculo
+    if (event.key === 'a' || event.key === 'A') {
+        toggleTheme();
     }
 });
